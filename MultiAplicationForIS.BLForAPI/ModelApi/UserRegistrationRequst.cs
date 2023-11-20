@@ -1,8 +1,7 @@
-﻿namespace MultiAplicationForIS.WebApi.ModelApi
+﻿namespace MultiAplicationForIS.BLForAPI.ModelApi
 {
-    public class UserRespons
+    internal class UserRegistrationRequst
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }

@@ -7,15 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MultiAplicationForIS.Core\MultiAplicationForIS.Core.csproj" />
+    <ProjectReference Include="..\MultiAplicationForIS.SQLDB\MultiAplicationForIS.SQLDB.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace MultiAplicationForIS.WebApi.ModelApi
+﻿namespace MultiAplicationForIS.BLForAPI.ModelApi
 {
-    public class UserRespons
+    internal class UserRespons
     {
         public int Id { get; set; }
         public string Name { get; set; }

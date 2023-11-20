@@ -15,13 +15,25 @@ namespace MultiAplicationForIS.WebApi.Controllers
             _userService = service;
         }
 
-
-        [HttpPatch]
+        [HttpPost]
         public ActionResult<UserRespons> GetUser (UserAuthorizationRequst requst)
         {
-
+            try
+            {
+                var userCore = _userService.GetUser(requst.Emeil, requst.Password);
+                return Ok(new UserRespons
+                {
+                    Password = userCore.Password
+                ,
+                    Email = userCore.Email,
+                    Name = userCore.Name,
+                    Id = userCore.Id
+                });
+            }
+            catch (Exception ex)
+            {
+                return  BadRequest(ex.Message);
+            }
         }
-
-
     }
 }

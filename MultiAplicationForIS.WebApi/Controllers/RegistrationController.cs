@@ -17,7 +17,7 @@ namespace MultiAplicationForIS.WebApi.Controllers
         [HttpPost("Registration")]
         public ActionResult Registration (ModelApi.UserRegistrationRequst requst)
         {
-            if (requst != null)
+            if (requst == null)
                 return BadRequest("Пустой запрос");
 
             if (string.IsNullOrEmpty(requst.Email)) // todo -добавить проверку на  коректоность

@@ -1,6 +1,6 @@
-﻿namespace MultiAplicationForIS.WebApi.ModelApi
+﻿namespace MultiAplicationForIS.BLForAPI.ModelApi
 {
-    public class UserAuthorizationRequst
+    internal class UserAuthorizationRequst
     {
         public string Emeil { get; set; }
         public string Password { get; set; }

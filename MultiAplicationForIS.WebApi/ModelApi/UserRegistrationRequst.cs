@@ -1,6 +1,6 @@
 ﻿namespace MultiAplicationForIS.WebApi.ModelApi
 {
-    internal class UserRegistrationRequst
+    public class UserRegistrationRequst
     {
         public string Name { get; set; }
         public string Email { get; set; }
