@@ -1,0 +1,34 @@
+﻿@page
+@model MultiAplicationForIS.WebUI.Pages.AddUserModel
+@{
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="container-fluid">
+    <div class="col-md-4 offset-md-4">
+        <div class="form-container">
+            <div class="form-icon"><i class="fa fa-user"></i></div>
+            <h3 class="title">Регисрация</h3>
+            <form class="form-horizontal" method="post">
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input class="form-control" type="text" name="name" placeholder="email address">
+                </div>
+
+                <div class="form-group">
+                    <label>email</label>
+                    <input class="form-control" type="email" name="login" placeholder="email address">
+                </div>
+                <div class="form-group">
+                    <label>password</label>
+                    <input class="form-control" type="password" name="password" placeholder="password">
+                </div>
+                <button type="submit" asp-page-handler="AddUser" class="btn btn-default">Регистрация</button>
+            </form>
+        </div>
+    </div>
+
+    <h1>@Model.Message</h1>
+
+</div>

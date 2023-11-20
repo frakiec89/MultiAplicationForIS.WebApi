@@ -20,6 +20,8 @@ namespace MultiAplicationForIS.BLForAPI
             try
             {
                 string otvet = APIService.Post(url, userRequstJson);
+                if (otvet == null)
+                     throw new Exception(otvet);
             }
             catch (Exception ex)
             {

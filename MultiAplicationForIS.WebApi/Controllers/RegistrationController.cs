@@ -21,7 +21,7 @@ namespace MultiAplicationForIS.WebApi.Controllers
                 return BadRequest("Пустой запрос");
 
             if (string.IsNullOrEmpty(requst.Email)) // todo -добавить проверку на  коректоность
-                return BadRequest("Пустой емейл");
+                return BadRequest("Пустой мейл");
 
             if (string.IsNullOrEmpty(requst.Password))
                 return BadRequest("Пустой пароль");

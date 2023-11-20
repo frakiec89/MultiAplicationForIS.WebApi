@@ -20,7 +20,13 @@ namespace MultiAplicationForIS.BLForAPI
            
             request.AddStringBody(body, DataFormat.Json);
             RestResponse response =  client.ExecuteAsync(request).Result;
-            return  response .Content;
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                return response.Content;
+            }
+            else
+                throw new Exception(response.Content);
+           
         }
     }
 }
