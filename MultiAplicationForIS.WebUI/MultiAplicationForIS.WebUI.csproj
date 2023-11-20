@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MultiAplicationForIS.BLForAPI\MultiAplicationForIS.BLForAPI.csproj" />
+    <ProjectReference Include="..\MultiAplicationForIS.Core\MultiAplicationForIS.Core.csproj" />
+  </ItemGroup>
+
 </Project>
