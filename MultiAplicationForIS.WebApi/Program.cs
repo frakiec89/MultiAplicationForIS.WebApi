@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//builder.WebHost.UseUrls(new[] { "http://192.168.59.39:83" });
+builder.WebHost.UseUrls(new[] { "http://192.168.59.39:83" });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

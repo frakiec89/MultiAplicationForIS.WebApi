@@ -9,7 +9,7 @@ namespace MultiAplicationForIS.BLForAPI
     public class APIUserService : IUserService
     {
 
-        private readonly string host = "http://10.0.2.2:5226";
+        private readonly string host = "http://192.168.59.39:83";
 
         public void AddUser(string username, string password, string email)
         {
