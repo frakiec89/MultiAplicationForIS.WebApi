@@ -16,7 +16,7 @@ namespace MultiAplicationForIS.WebUI.Pages
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-            _IUserService = new APIUserService();
+            _IUserService = new APIUserService(); // todo  плохо  
         }
 
         public void OnGet()

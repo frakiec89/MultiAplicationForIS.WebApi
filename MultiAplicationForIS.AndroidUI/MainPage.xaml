@@ -3,36 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MultiAplicationForIS.AndroidUI.MainPage">
 
-    <ScrollView>
+    <ScrollView  VerticalOptions="Center">
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                Text="Окно авторизации"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
+
+            <Entry
+                x:Name="entryLogin"
+                Placeholder ="Введите логин"
+                FontFamily="Helvetica"
+                FontSize="20"
+                MaxLength = "20"
+                ></Entry>
+
+            <Entry
+                x:Name="entryPassword"
+                Placeholder ="Введите пароль"
+                FontFamily="Helvetica"
+                FontSize="20"
+                MaxLength = "20"
+                ></Entry>
+
             <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                x:Name="BtnAut"
+                Text="Вход"
+                SemanticProperties.Hint="Введите лонин  и пароль и нажмите на кнопку"
+                Clicked="BtnAut_Clicked"
+                HorizontalOptions="Center" />
+
+
+            <Label
+                x:Name="labelMessage"
+                FontSize="18"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

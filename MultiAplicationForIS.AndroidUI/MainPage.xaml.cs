@@ -1,24 +1,32 @@
-﻿namespace MultiAplicationForIS.AndroidUI
+﻿using MultiAplicationForIS.BLForAPI;
+using MultiAplicationForIS.Core.Interfaces;
+
+namespace MultiAplicationForIS.AndroidUI
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        private readonly IUserService _IUserService;
 
         public MainPage()
         {
             InitializeComponent();
+            _IUserService = new APIUserService(); // зависимость 
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+       
+
+        private void BtnAut_Clicked(object sender, EventArgs e)
         {
-            count++;
+            try
+            {
+                var us =  _IUserService.GetUser(entryLogin.Text, entryPassword.Text);
+                labelMessage.Text = "Привет " + us.Name;
+            }
+            catch (Exception ex)
+            {
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+                labelMessage.Text = ex.Message;
+            }
         }
     }
 }
