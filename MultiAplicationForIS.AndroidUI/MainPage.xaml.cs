@@ -12,21 +12,26 @@ namespace MultiAplicationForIS.AndroidUI
             InitializeComponent();
             _IUserService = new APIUserService(); // зависимость 
         }
-
        
 
-        private void BtnAut_Clicked(object sender, EventArgs e)
+        private  async void BtnAut_Clicked(object sender, EventArgs e)
         {
             try
             {
                 var us =  _IUserService.GetUser(entryLogin.Text, entryPassword.Text);
-                labelMessage.Text = "Привет " + us.Name;
+                await DisplayAlert("Уведомление", $"Привет {us.Name}", "ОK");
             }
             catch (Exception ex)
             {
 
-                labelMessage.Text = ex.Message;
+                await DisplayAlert("Ошибка", ex.Message, "ОK");
             }
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            AddUserPage addUserPage = new AddUserPage(_IUserService);
+            await Navigation.PushModalAsync(addUserPage);
         }
     }
 }

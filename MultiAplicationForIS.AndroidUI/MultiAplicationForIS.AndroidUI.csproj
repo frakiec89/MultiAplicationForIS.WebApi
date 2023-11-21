@@ -61,4 +61,10 @@
 	  <ProjectReference Include="..\MultiAplicationForIS.Core\MultiAplicationForIS.Core.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="AddUserPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

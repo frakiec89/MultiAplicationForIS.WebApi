@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MultiAplicationForIS.AndroidUI.MainPage">
-
+             x:Class="MultiAplicationForIS.AndroidUI.AddUserPage"
+             Title="AddUserPage">
     <ScrollView  VerticalOptions="Center">
         <VerticalStackLayout
             Spacing="25"
@@ -10,10 +10,16 @@
             VerticalOptions="Center">
 
             <Label
-                Text="Окно авторизации"
+                Text="Окно регистрации"
                 FontSize="18"
                 HorizontalOptions="Center" />
-
+            <Entry
+                x:Name="entryName"
+                Placeholder ="Введите имя"
+                FontFamily="Helvetica"
+                FontSize="20"
+                MaxLength = "20"
+                ></Entry>
 
             <Entry
                 x:Name="entryLogin"
@@ -32,17 +38,17 @@
                 ></Entry>
 
             <Button
-                x:Name="BtnAut"
+                x:Name="BtnAddUser"
                 Text="Вход"
                 SemanticProperties.Hint="Введите лонин  и пароль и нажмите на кнопку"
-                Clicked="BtnAut_Clicked"
+                Clicked="BtnAddUser_Clicked"
                 HorizontalOptions="Center" />
 
 
-            <Button Clicked="Button_Clicked" Text="Регистарция" />
-
-
-
+            <Label
+                x:Name="labelMessage"
+                FontSize="18"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>
